@@ -27,7 +27,7 @@ export default function Footer() {
                             Minervasutra
                         </div>
                         <p className="text-gray-500 max-w-sm">
-                            The all-in-one HR platform designed for efficiency, compliance, and employee success.
+                            The all-in-one AI-Powered HR platform designed for efficiency, compliance, and employee success.
                         </p>
                     </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
                 {/* Bottom Section: Copyright and Socials */}
                 <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                     <p>
-                        &copy; {new Date().getFullYear()} Minervasutra. All rights reserved. Powered By Cyberspace Works.
+                        &copy; {new Date().getFullYear()} Minervasutra. All rights reserved. Powered By <a className='text-cyan-600 font-semibold' href="https://cyberspaceworks.com">Cyberspace Works</a>.
                     </p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <a href="#" aria-label="Facebook" className="hover:text-fuchsia-600"><Facebook className="w-5 h-5" /></a>
