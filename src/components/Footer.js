@@ -35,10 +35,9 @@ export default function Footer() {
                     <div>
                         <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Product</h4>
                         <ul className="space-y-3">
-                            <FooterLink href="#">Features</FooterLink>
-                            <FooterLink href="#">Pricing</FooterLink>
-                            <FooterLink href="#">Integrations</FooterLink>
-                            <FooterLink href="#">Case Studies</FooterLink>
+                            <FooterLink href="/features">Features</FooterLink>
+                            <FooterLink href="/pricing">Pricing</FooterLink>
+                            
                         </ul>
                     </div>
 
@@ -46,10 +45,9 @@ export default function Footer() {
                     <div>
                         <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Company</h4>
                         <ul className="space-y-3">
-                            <FooterLink href="#">About Us</FooterLink>
-                            <FooterLink href="#">Careers</FooterLink>
-                            <FooterLink href="#">Newsroom</FooterLink>
-                            <FooterLink href="#">Contact</FooterLink>
+                            <FooterLink href="/about">About Us</FooterLink>
+                            
+                            <FooterLink href="/contact">Contact</FooterLink>
                         </ul>
                     </div>
 
@@ -59,24 +57,11 @@ export default function Footer() {
                         <ul className="space-y-3 mb-6">
                             <FooterLink href="#">Terms of Service</FooterLink>
                             <FooterLink href="#">Privacy Policy</FooterLink>
-                            <FooterLink href="#">Security</FooterLink>
+                            
                         </ul>
 
-                        <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Newsletter</h4>
-                        <form className="flex">
-                            <input
-                                type="email"
-                                placeholder="Your email"
-                                className="w-full px-3 py-2 border border-gray-300 rounded-l-lg focus:ring-fuchsia-500 focus:border-fuchsia-500"
-                            />
-                            <button
-                                type="submit"
-                                className="p-3 bg-fuchsia-600 text-white rounded-r-lg hover:bg-fuchsia-700 transition duration-150"
-                                aria-label="Subscribe"
-                            >
-                                <Mail className="w-5 h-5" />
-                            </button>
-                        </form>
+                        
+                            
                     </div>
 
                 </div>
@@ -84,7 +69,7 @@ export default function Footer() {
                 {/* Bottom Section: Copyright and Socials */}
                 <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                     <p>
-                        &copy; {new Date().getFullYear()} Minervasutra. All rights reserved.
+                        &copy; {new Date().getFullYear()} Minervasutra. All rights reserved. Powered By Cyberspace Works.
                     </p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <a href="#" aria-label="Facebook" className="hover:text-fuchsia-600"><Facebook className="w-5 h-5" /></a>
