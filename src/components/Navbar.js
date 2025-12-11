@@ -45,8 +45,8 @@ export default function Navbar({ activePath = '/' }) {
                             const linkClasses = `
                                 px-5 py-2 rounded-full text-base font-medium transition duration-150 ease-in-out 
                                 ${isActive
-                                    ? 'bg-fuchsia-600 text-white shadow-lg' // Active: Solid Fuchsia Button (matching design image)
-                                    : 'text-gray-700 hover:text-fuchsia-600 hover:bg-fuchsia-50' // Inactive: Clean hover effect
+                                    ? 'bg-fuchsia-600 text-cyan-200 shadow-lg' // Active: Solid Fuchsia Button (matching design image)
+                                    : 'text-gray-700 hover:text-fuchsia-600 hover:bg-cyan-200' // Inactive: Clean hover effect
                                 }
                             `;
 
@@ -75,7 +75,7 @@ export default function Navbar({ activePath = '/' }) {
                         {/* Mobile Menu Button - UPDATED to handle click and change icon */}
                         <button
                             type="button"
-                            className="lg:hidden p-2 text-gray-600 hover:text-fuchsia-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
+                            className="lg:hidden p-2 text-cyan-600 hover:text-fuchsia-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                             aria-label="Toggle navigation"
                             onClick={toggleMenu} // <--- ADDED onClick handler
                         >
@@ -101,8 +101,8 @@ export default function Navbar({ activePath = '/' }) {
                                         className={`
                                             block w-full px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out
                                             ${activePath === item.href
-                                                ? 'bg-fuchsia-600 text-white'
-                                                : 'text-gray-700 hover:text-fuchsia-600 hover:bg-fuchsia-50'
+                                                ? 'bg-fuchsia-600 text-cyan-200'
+                                                : 'text-gray-700 hover:text-cyan-600 hover:bg-fuchsia-200'
                                             }
                                         `}
                                     >
