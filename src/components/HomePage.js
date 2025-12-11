@@ -331,7 +331,7 @@ export default function HomePageComponent() {
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-indigo-600">
                                     Transform
                                 </span>{' '}
-                                Your HR <br /> Operations with{' '} 
+                                Your HR Operations with{' '} 
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-indigo-600">
                                     AI
                                 </span>
