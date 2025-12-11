@@ -1,15 +1,10 @@
+/* src/app/globals.css */
+
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +15,32 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* CRITICAL FIX: Explicitly apply the font variable here */
+  font-family: var(--font-inter), sans-serif;
 }
+
+/* ... (rest of the grid-mask-bg remains the same) ... */
+
+.grid-mask-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+
+  /* Grid pattern definition using slate-300 (#cbd5e1) */
+  background-image: linear-gradient(to right, #cbd5e1 1px, transparent 1px),
+    linear-gradient(to bottom, #cbd5e1 1px, transparent 1px);
+  background-size: 20px 30px;
+
+  /* Radial Mask */
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%,
+      #000 60%,
+      transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%,
+      #000 60%,
+      transparent 100%);
+}
+
