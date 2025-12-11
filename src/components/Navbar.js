@@ -1,8 +1,8 @@
 // src/components/Navbar.js
 // NOTE: This component requires the 'activePath' prop passed from the LayoutWrapper.js
 
-import React from 'react';
-import { ArrowRight, Menu } from 'lucide-react';
+import React, { useState } from 'react'; // <--- ADDED: useState import
+import { ArrowRight, Menu, X } from 'lucide-react'; // <--- UPDATED: Added X icon for closing
 
 const navItems = [
     { name: 'Home', href: '/' },
@@ -14,6 +14,13 @@ const navItems = [
 
 // The Navbar component accepts the current URL path as a prop
 export default function Navbar({ activePath = '/' }) {
+    // 1. State for controlling the mobile menu visibility
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // 2. Function to toggle the menu state
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
         <header className="sticky top-0 z-50 w-full backdrop-blur-sm bg-white/80 transition-shadow duration-300 shadow-sm">
@@ -65,17 +72,59 @@ export default function Navbar({ activePath = '/' }) {
                             <ArrowRight className="w-4 h-4 ml-2" />
                         </a>
 
-                        {/* Mobile Menu Button */}
+                        {/* Mobile Menu Button - UPDATED to handle click and change icon */}
                         <button
                             type="button"
                             className="lg:hidden p-2 text-gray-600 hover:text-fuchsia-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"
                             aria-label="Toggle navigation"
+                            onClick={toggleMenu} // <--- ADDED onClick handler
                         >
-                            <Menu className="w-6 h-6" />
+                            {/* Conditional icon: Menu when closed, X when open */}
+                            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
                     </div>
                 </div>
             </div>
+
+            {/* 3. Mobile Menu Panel (conditionally rendered) */}
+            {isMenuOpen && (
+                <div className="lg:hidden absolute top-20 inset-x-0 p-2 transition transform origin-top-right">
+                    <div className="rounded-lg shadow-2xl bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100">
+                        <div className="px-5 pt-4 pb-6 space-y-1">
+                            {/* Navigation Links for Mobile */}
+                            <nav className="space-y-1">
+                                {navItems.map((item) => (
+                                    <a
+                                        key={item.name}
+                                        href={item.href}
+                                        onClick={toggleMenu} // Close menu on click
+                                        className={`
+                                            block w-full px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out
+                                            ${activePath === item.href
+                                                ? 'bg-fuchsia-600 text-white'
+                                                : 'text-gray-700 hover:text-fuchsia-600 hover:bg-fuchsia-50'
+                                            }
+                                        `}
+                                    >
+                                        {item.name}
+                                    </a>
+                                ))}
+                            </nav>
+                        </div>
+                        {/* Mobile Action Button */}
+                        <div className="py-4 px-5">
+                            <a
+                                href="#request-demo"
+                                onClick={toggleMenu} // Close menu on click
+                                className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-lg text-white bg-fuchsia-600 hover:bg-fuchsia-700 shadow-lg transition duration-150 ease-in-out"
+                            >
+                                Request Demo
+                                <ArrowRight className="w-4 h-4 ml-2" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            )}
         </header>
     );
 }
