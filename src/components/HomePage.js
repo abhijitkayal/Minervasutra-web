@@ -331,7 +331,10 @@ export default function HomePageComponent() {
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-indigo-600">
                                     Transform
                                 </span>{' '}
-                                Your HR Operations
+                                Your HR <br /> Operations with{' '} 
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-indigo-600">
+                                    AI
+                                </span>
                             </h1>
                             <p className="mt-6 text-xl text-gray-700 max-w-lg">
                                 Streamline recruitment, onboarding, payroll, and performance management with our all-in-one HR platform built for modern teams.
