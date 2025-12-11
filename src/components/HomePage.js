@@ -327,7 +327,7 @@ export default function HomePageComponent() {
                                 <CheckCircle className="w-4 h-4 mr-1 text-purple-500" />
                                 Trusted by 2,000+ companies worldwide
                             </p>
-                            <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight text-gray-900">
+                            <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-gray-900">
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-indigo-600">
                                     Transform
                                 </span>{' '}
