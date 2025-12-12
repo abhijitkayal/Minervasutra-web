@@ -1,8 +1,10 @@
 // src/components/Navbar.js
 // NOTE: This component requires the 'activePath' prop passed from the LayoutWrapper.js
 
-import React, { useState } from 'react'; // <--- ADDED: useState import
-import { ArrowRight, Menu, X } from 'lucide-react'; // <--- UPDATED: Added X icon for closing
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowRight, Menu, X } from 'lucide-react';
 
 const navItems = [
     { name: 'Home', href: '/' },
@@ -27,13 +29,17 @@ export default function Navbar({ activePath = '/' }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
 
-                    {/* Logo/Brand (Minervasutra) - Links to Home */}
-                    <a href="/" className="flex items-center">
-                        <div className="w-6 h-6 rounded-full bg-fuchsia-600 mr-2 flex items-center justify-center text-white font-bold text-sm">N</div>
-                        <span className="text-xl font-extrabold text-gray-900">
-                            Minervasutra
-                        </span>
-                    </a>
+                    {/* Logo/Brand (Minervasutra) - Links to Home - UPDATED TO USE logo.png */}
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/logo.png"
+                            alt="Minervasutra Logo"
+                            width={60}
+                            height={60}
+                            className="w-15 h-15 mr-2"
+                        />
+                        
+                    </Link>
 
                     {/* Desktop Navigation Links */}
                     <nav className="hidden lg:flex space-x-2">
@@ -51,13 +57,13 @@ export default function Navbar({ activePath = '/' }) {
                             `;
 
                             return (
-                                <a
+                                <Link
                                     key={item.name}
                                     href={item.href}
                                     className={linkClasses}
                                 >
                                     {item.name}
-                                </a>
+                                </Link>
                             );
                         })}
                     </nav>
@@ -94,10 +100,10 @@ export default function Navbar({ activePath = '/' }) {
                             {/* Navigation Links for Mobile */}
                             <nav className="space-y-1">
                                 {navItems.map((item) => (
-                                    <a
+                                    <Link
                                         key={item.name}
                                         href={item.href}
-                                        onClick={toggleMenu} // Close menu on click
+                                        onClick={toggleMenu}
                                         className={`
                                             block w-full px-3 py-2 rounded-md text-base font-medium transition duration-150 ease-in-out
                                             ${activePath === item.href
@@ -107,7 +113,7 @@ export default function Navbar({ activePath = '/' }) {
                                         `}
                                     >
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 ))}
                             </nav>
                         </div>
