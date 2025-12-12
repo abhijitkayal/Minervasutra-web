@@ -11,8 +11,8 @@ const inter = Inter({
 
 // Metadata remains a Server Component feature
 export const metadata = {
-  title: 'HRMS Software',
-  description: 'Streamline your HR operations with our modern platform.',
+  title: 'Minervasutra - AI Powered HR Platform',
+  description: 'Streamline your HR operations with AI and our modern platform.',
 };
 
 // RootLayout remains a Server Component
