@@ -1,5 +1,6 @@
 // src/components/Footer.js
 
+import Image from 'next/image';
 import { Mail, Facebook, Twitter, Linkedin } from 'lucide-react';
 
 const FooterLink = ({ href, children }) => (
@@ -21,13 +22,24 @@ export default function Footer() {
                 {/* Top Section: Logo, Newsletter, and Main Links */}
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8 border-b border-gray-100 pb-10 mb-8">
 
-                    {/* Column 1: Logo and About */}
+                    {/* Column 1: Logo and About - UPDATED */}
                     <div className="md:col-span-2">
-                        <div className="text-2xl font-bold text-fuchsia-600 mb-4">
-                            Minervasutra
+
+                        {/* Logo Group: Image + Text */}
+                        <div className="flex items-center mb-4">
+                            <Image
+                                src="/logo.png"
+                                alt="Minervasutra Logo"
+                                width={32}
+                                height={32}
+                                className="mr-2"
+                            />
+                            
                         </div>
+                        {/* End Logo Group */}
+
                         <p className="text-gray-500 max-w-sm">
-                            The all-in-one AI-Powered HR platform designed for efficiency, compliance, and employee success.
+                            The all-in-one AI Powered HR platform designed for efficiency, compliance, and employee success.
                         </p>
                     </div>
 
@@ -37,7 +49,7 @@ export default function Footer() {
                         <ul className="space-y-3">
                             <FooterLink href="/features">Features</FooterLink>
                             <FooterLink href="/pricing">Pricing</FooterLink>
-                            
+
                         </ul>
                     </div>
 
@@ -46,7 +58,7 @@ export default function Footer() {
                         <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Company</h4>
                         <ul className="space-y-3">
                             <FooterLink href="/about">About Us</FooterLink>
-                            
+
                             <FooterLink href="/contact">Contact</FooterLink>
                         </ul>
                     </div>
@@ -57,11 +69,11 @@ export default function Footer() {
                         <ul className="space-y-3 mb-6">
                             <FooterLink href="#">Terms of Service</FooterLink>
                             <FooterLink href="#">Privacy Policy</FooterLink>
-                            
+
                         </ul>
 
-                        
-                            
+
+
                     </div>
 
                 </div>
@@ -69,7 +81,7 @@ export default function Footer() {
                 {/* Bottom Section: Copyright and Socials */}
                 <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
                     <p>
-                        &copy; {new Date().getFullYear()} Minervasutra. All rights reserved. Powered By <a className='text-cyan-600 font-semibold' href="https://cyberspaceworks.com">Cyberspace Works</a>.
+                        &copy; {new Date().getFullYear()} Minervasutra. All rights reserved. Powered By <a href="#" aria-label="Facebook" className="hover:text-fuchsia-600"></a>Cyberspace Wrorks
                     </p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <a href="#" aria-label="Facebook" className="hover:text-fuchsia-600"><Facebook className="w-5 h-5" /></a>
