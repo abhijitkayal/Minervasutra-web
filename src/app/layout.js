@@ -14,7 +14,12 @@ export const metadata = {
   // title: 'Minervasutra - AI Powered HR Platform',
   title:'Minervasutra: The All-in-One AI Powered HR Management Software',
   // description: 'Streamline your HR operations with AI and our modern platform.',
-  description:'Automate your entire workforce with Minervasutra. Our AI HR platform streamlines hiring, payroll, and employee management to scale your business faster.'
+  description:'Automate your entire workforce with Minervasutra. Our AI HR platform streamlines hiring, payroll, and employee management to scale your business faster.',
+  icons: {
+    icon: '/logo1.png',
+    shortcut: '/logo1.png',
+    apple: '/logo1.png'
+  }
 };
 
 // RootLayout remains a Server Component

@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Menu, X } from 'lucide-react';
+// import logo from 'Minervasutra/minervasutra/public/Screenshot 2025-12-29 220722-B0FWZlK3.png'
 
 const navItems = [
     { name: 'Home', href: '/' },
@@ -32,7 +33,7 @@ export default function Navbar({ activePath = '/' }) {
                     {/* Logo/Brand (Minervasutra) - Links to Home - UPDATED TO USE logo.png */}
                     <Link href="/" className="flex items-center">
                         <Image
-                            src="/logo.png"
+                            src="/logo1.png"
                             alt="Minervasutra Logo"
                             width={60}
                             height={60}
