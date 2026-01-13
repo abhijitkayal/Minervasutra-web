@@ -78,8 +78,8 @@ export default function FeaturesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <main>
-        <h1>{SEO.title}</h1>
-        <p>{SEO.description}</p>
+        {/* <h1>{SEO.title}</h1>
+        <p>{SEO.description}</p> */}
         <AllFeaturesComponent />
       </main>
     </>

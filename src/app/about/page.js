@@ -55,8 +55,8 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <main>
-        <h1>{SEO.title}</h1>
-        <p>{SEO.description}</p>
+        {/* <h1>{SEO.title}</h1>
+        <p>{SEO.description}</p> */}
         <AboutUsComponent />
       </main>
     </>
