@@ -16,9 +16,9 @@ export const metadata = {
   // description: 'Streamline your HR operations with AI and our modern platform.',
   description:'Automate your entire workforce with Minervasutra. Our AI HR platform streamlines hiring, payroll, and employee management to scale your business faster.',
   icons: {
-    icon: '/logo1.png',
-    shortcut: '/logo1.png',
-    apple: '/logo1.png'
+    icon: '/logo1-removebg-preview.png',
+    shortcut: '/logo1-removebg-preview.png',
+    apple: '/logo1-removebg-preview.png'
   }
 };
 

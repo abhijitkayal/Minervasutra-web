@@ -28,10 +28,10 @@ export default function Footer() {
                         {/* Logo Group: Image + Text */}
                         <div className="flex items-center mb-4">
                             <Image
-                                src="/logo1.png"
+                                src="/logo1-removebg-preview.png"
                                 alt="Minervasutra Logo"
-                                width={32}
-                                height={32}
+                                width={50}
+                                height={50}
                                 className="mr-2"
                             />
                             

@@ -33,11 +33,11 @@ export default function Navbar({ activePath = '/' }) {
                     {/* Logo/Brand (Minervasutra) - Links to Home - UPDATED TO USE logo.png */}
                     <Link href="/" className="flex items-center">
                         <Image
-                            src="/logo1.png"
+                            src="/logo1-removebg-preview.png"
                             alt="Minervasutra Logo"
-                            width={60}
-                            height={60}
-                            className="w-15 h-15 mr-2"
+                            width={100}
+                            height={100}
+                            className="w-30 h-15 mr-2"
                         />
                         
                     </Link>
