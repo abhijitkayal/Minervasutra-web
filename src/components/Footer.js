@@ -30,8 +30,8 @@ export default function Footer() {
                             <Image
                                 src="/logo1-removebg-preview.png"
                                 alt="Minervasutra Logo"
-                                width={50}
-                                height={50}
+                                width={80}
+                                height={80}
                                 className="mr-2"
                             />
                             

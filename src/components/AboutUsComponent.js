@@ -67,11 +67,37 @@ const TimelineItem = ({ year, title, description, alignment }) => (
 // --- MAIN ABOUT US COMPONENT ---
 
 export default function AboutUsComponent() {
+    const gridStyle = {
+        backgroundImage: `linear-gradient(to right, #cbd5e1 1px, transparent 1px), linear-gradient(to bottom, #cbd5e1 1px, transparent 1px)`,
+        backgroundSize: '20px 30px',
+        maskImage: `radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)`,
+        WebkitMaskImage: `radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)`,
+    };
+
+    const blurStyle = {
+        filter: 'blur(100px)',
+        transform: 'translateZ(0)',
+    };
+
     return (
         <div className="bg-white min-h-screen">
+            {/* Grid Background */}
+            <div className="absolute top-0 right-0 bottom-0 left-0 z-0 overflow-hidden"  />
+            
+            {/* Gradient Background */}
+            <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden pointer-events-none z-0">
+                <div
+                    className="absolute top-[-100px] left-[-300px] w-[1200px] h-[1200px] rounded-full bg-gradient-to-br from-cyan-400/50 via-transparent to-transparent"
+                    style={blurStyle}
+                />
+                <div
+                    className="absolute top-[-100px] right-[-300px] w-[1200px] h-[500px] rounded-full bg-gradient-to-tl from-fuchsia-500/50 via-transparent to-transparent"
+                    style={blurStyle}
+                />
+            </div>
 
             {/* Header / Hero Section */}
-            <div className="pt-32 pb-20 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="pt-32 pb-20 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900">
                     Making HR <span className="text-fuchsia-600">Human</span> Again
                 </h1>

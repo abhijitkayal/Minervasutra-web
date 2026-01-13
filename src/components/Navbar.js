@@ -37,7 +37,7 @@ export default function Navbar({ activePath = '/' }) {
                             alt="Minervasutra Logo"
                             width={100}
                             height={100}
-                            className="w-30 h-15 mr-2"
+                            className="w-24 h-18 mr-2"
                         />
                         
                     </Link>

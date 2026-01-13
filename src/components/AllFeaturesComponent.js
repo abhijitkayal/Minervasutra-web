@@ -3,6 +3,19 @@
 import React from 'react'; // Added explicit React import for safety
 import { ArrowRight, Check, User, Clock, Briefcase, DollarSign, Activity, FileText, Globe, Zap, Settings, BookOpen, BarChart } from 'lucide-react';
 
+// Grid and gradient styles
+const gridStyle = {
+    backgroundImage: `linear-gradient(to right, #cbd5e1 1px, transparent 1px), linear-gradient(to bottom, #cbd5e1 1px, transparent 1px)`,
+    backgroundSize: '20px 30px',
+    maskImage: `radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)`,
+    WebkitMaskImage: `radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)`,
+};
+
+const blurStyle = {
+    filter: 'blur(100px)',
+    transform: 'translateZ(0)',
+};
+
 // --- REUSABLE FEATURE CARD COMPONENT ---
 const FeatureCard = ({ icon: Icon, title, description, benefits, imagePlaceholderClass = "bg-gray-100/50" }) => (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center border-b border-gray-100 py-16 lg:py-24">
@@ -172,9 +185,23 @@ const FinalCTABanner = () => (
 export default function AllFeaturesComponent() {
     return (
         <div className="bg-white min-h-screen relative overflow-hidden">
+            {/* Grid Background */}
+            <div className="absolute top-0 right-0 bottom-0 left-0 z-0 overflow-hidden"  />
+            
+            {/* Gradient Background */}
+            <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden pointer-events-none z-0">
+                <div
+                    className="absolute top-[-100px] left-[-300px] w-[1200px] h-[1200px] rounded-full bg-gradient-to-br from-cyan-400/50 via-transparent to-transparent"
+                    style={blurStyle}
+                />
+                <div
+                    className="absolute top-[-100px] right-[-300px] w-[1200px] h-[500px] rounded-full bg-gradient-to-tl from-fuchsia-500/50 via-transparent to-transparent"
+                    style={blurStyle}
+                />
+            </div>
 
             {/* Introductory Header */}
-            <div className="bg-gray-50 pt-32 pb-16 text-center">
+            <div className="bg-transparent pt-32 pb-16 text-center relative z-10">
                 <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900">
                     All the Tools You Need to<br />
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 to-indigo-600">
